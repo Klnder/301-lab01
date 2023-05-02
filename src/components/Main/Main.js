@@ -1,5 +1,5 @@
 import React from "react";
-import HornedBeast from "./HornedBeast.js";
+import HornedBeast from "./HornedBeast";
 
 let HornedBeasts = [
   {
@@ -34,9 +34,11 @@ let HornedBeasts = [
 export default function Main() {
   return (
     <div>
-      <HornedBeast title={HornedBeasts[0].title} imageUrl={HornedBeasts[0].image_url} description={HornedBeasts[0].description} />
-      <HornedBeast title={HornedBeasts[1].title} imageUrl={HornedBeasts[1].image_url} description={HornedBeasts[1].description} />
-      <HornedBeast title={HornedBeasts[2].title} imageUrl={HornedBeasts[2].image_url} description={HornedBeasts[2].description} />
+      {HornedBeasts.map((HornedBeastElement) => (
+        <div>
+          <HornedBeast title={HornedBeastElement.title} imageUrl={HornedBeastElement.image_url} description={HornedBeastElement.description} />
+        </div>
+      ))}
     </div>
   );
 }
