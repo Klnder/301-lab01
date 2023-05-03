@@ -1,4 +1,4 @@
-.App {
+* {
   margin: 0px;
   padding: 0px;
 }
@@ -10,6 +10,7 @@ main {
   display: flex;
   width: 80%;
   margin: 0 auto;
+  margin-top: 10px;
   flex-wrap: wrap;
   justify-content: space-between;
 }
@@ -26,6 +27,7 @@ article {
   border-color: black;
   border-style: solid;
   padding: 10px;
+  margin-bottom: 10px;
 }
 .Favorite {
   display: flex;
@@ -34,4 +36,5 @@ article {
 }
 button {
   margin: 5px;
+  padding: 1px 6px;
 }
