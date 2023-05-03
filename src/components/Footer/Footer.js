@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function p() {
+export default function Footer() {
   return (
-    <div>
+    <footer>
       <p>Copyright Jeremy</p>
-    </div>
+    </footer>
   );
 }

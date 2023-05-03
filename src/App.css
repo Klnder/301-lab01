@@ -1,1 +1,11 @@
-
+body {
+  margin: 0;
+  background-color: fuchsia;
+  font-family: monospace;
+}
+.App {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

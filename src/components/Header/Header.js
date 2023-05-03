@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function h1() {
+export default function Header() {
   return (
-    <div>
+    <header>
       <h1>Welcome to my website !</h1>
-    </div>
+    </header>
   );
 }
