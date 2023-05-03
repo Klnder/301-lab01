@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import "./HornedBeast.css";
 
 export default function HornedBeast(props) {
   const [votes, setVotes] = useState(0);
@@ -15,12 +16,12 @@ export default function HornedBeast(props) {
 
   return (
     <article>
+      <h2>{props.title}</h2>
       <div class="Favorite">
         <button onClick={handleClickPlus}>+</button>
         <button onClick={handleClickMinus}>-</button>
         <p>❤️ {votes}</p>
       </div>
-      <h2>{props.title}</h2>
       <img src={props.imageUrl} alt="img Horned Beast" title="Horned beast"></img>
       <p>{props.description}</p>
     </article>
