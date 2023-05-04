@@ -15,19 +15,19 @@ export default function Main() {
     setModalImg(imgUrl);
     setModalDescription(description);
   }
-
-  return (
-    <main>
-      {data.map((HornedBeastElement) => (
+  const beasts = data.map((HornedBeastElement) => (
         <HornedBeast
           key={HornedBeastElement._id}
           title={HornedBeastElement.title}
           imageUrl={HornedBeastElement.image_url}
           description={HornedBeastElement.description}
           handleModal={handleModal}
-        />
-      ))}
+        />));
+
+  return (
+    <main>
       {showModal && <SelectedBeast description={modalDescription} imageUrl={modalImg} handleModal={handleModal} />}
+      {beasts}
     </main>
   );
 }
