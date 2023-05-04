@@ -17,12 +17,17 @@ export default function HornedBeast(props) {
   return (
     <article>
       <h2>{props.title}</h2>
-      <div class="Favorite">
+      <div className="Favorite">
         <button onClick={handleClickPlus}>+</button>
         <button onClick={handleClickMinus}>-</button>
         <p>❤️ {votes}</p>
       </div>
-      <img src={props.imageUrl} alt="img Horned Beast" title="Horned beast"></img>
+      <img
+        src={props.imageUrl}
+        alt="img Horned Beast"
+        title="Horned beast"
+        onClick={() => props.handleModal(props.imageUrl, props.description)}
+      ></img>
       <p>{props.description}</p>
     </article>
   );
