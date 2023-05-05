@@ -22,6 +22,7 @@ export default function HornedBeast(props) {
         <button onClick={handleClickMinus}>-</button>
         <p>❤️ {votes}</p>
       </div>
+      <p>Number of horn :{props.numberHorn}</p>
       <img
         src={props.imageUrl}
         alt="img Horned Beast"
