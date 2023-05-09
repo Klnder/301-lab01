@@ -36,7 +36,7 @@ export default function Main() {
     setForm(newForm);
 
     if (newForm.sortSelect === "hornNumber" && newForm.inputValue) {
-      let beastsList = data.filter((HornedBeastElement) => HornedBeastElement.horns.toString() === newForm.inputValue);
+      let beastsList = data.filter((HornedBeastElement) => HornedBeastElement.horns === parseInt(newForm.inputValue));
       let beastsListElement = beastsList.map((HornedBeastElement) => (
         <HornedBeast
           key={HornedBeastElement._id}
@@ -49,7 +49,14 @@ export default function Main() {
       ));
       setBeasts(beastsListElement);
     } else if (newForm.sortSelect === "name" && newForm.inputValue) {
-      let beastsList = data.filter((HornedBeastElement) => HornedBeastElement.title.startsWith(newForm.inputValue));
+      let beastsList = data.filter((HornedBeastElement) => {
+        let title = HornedBeastElement.title.toLowerCase();
+        if (title.startsWith(newForm.inputValue.toLowerCase())) {
+          return HornedBeastElement;
+        } else {
+          return "";
+        }
+      });
       let beastsListElement = beastsList.map((HornedBeastElement) => (
         <HornedBeast
           key={HornedBeastElement._id}
