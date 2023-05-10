@@ -34,7 +34,7 @@ export default function Main() {
   function handleChange(event) {
     const newForm = { ...form, [event.target.name]: event.target.value };
     setForm(newForm);
-
+    //filter
     if (newForm.sortSelect === "hornNumber" && newForm.inputValue) {
       let beastsList = data.filter((HornedBeastElement) => HornedBeastElement.horns === parseInt(newForm.inputValue));
       let beastsListElement = beastsList.map((HornedBeastElement) => (
